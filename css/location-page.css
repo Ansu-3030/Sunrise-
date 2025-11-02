@@ -1,0 +1,123 @@
+.location-page {
+    padding: 80px 50px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(250,248,242,0.98));
+}
+
+.location-page-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.map-container {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+    width: 100%;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 600px;
+    border-radius: 8px;
+}
+
+.connectivity-container {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+}
+
+.connectivity-title {
+    color: var(--color-primary);
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.connectivity-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.connectivity-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+    padding: 12px;
+    background: white;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.connectivity-item:hover {
+    transform: translateY(-3px);
+}
+
+.connectivity-icon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(212,175,55,0.15), rgba(212,175,55,0.05));
+    border-radius: 50%;
+    color: var(--color-primary);
+    font-size: 16px;
+}
+
+.connectivity-details {
+    flex: 1;
+}
+
+.connectivity-name {
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 4px;
+}
+
+.connectivity-distance {
+    font-size: 14px;
+    color: #666;
+}
+
+@media (max-width: 1200px) {
+    .connectivity-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .connectivity-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .connectivity-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .location-page {
+        padding: 60px 20px;
+    }
+    .map-container iframe {
+        height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .connectivity-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .map-container iframe {
+        height: 300px;
+    }
+}
