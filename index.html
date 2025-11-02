@@ -2,13 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#D4AF37">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>Sunrise Golden - Luxury Living & Retail Spaces</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/specifications.css">
     <link rel="stylesheet" href="css/location-page.css">
     <link rel="stylesheet" href="css/enhanced-ui.css">
+    <link rel="stylesheet" href="css/mobile.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -21,10 +25,10 @@
             </a>
         </div>
         <div class="nav-links">
-            <a href="#home" class="nav-link">HOME</a>
-            <a href="#about" class="nav-link">ABOUT US</a>
-            <a href="#location-details" class="nav-link">LOCATION</a>
-            <a href="#connect" class="nav-link">CONNECT US</a>
+            <a href="#home" class="nav-link" aria-label="Home">HOME</a>
+            <a href="#about" class="nav-link" aria-label="About Us">ABOUT US</a>
+            <a href="#location-details" class="nav-link" aria-label="Location">LOCATION</a>
+            <a href="#connect" class="nav-link" aria-label="Connect">CONNECT US</a>
         </div>
     </nav>
 
@@ -396,6 +400,35 @@
             const locationSection = document.getElementById('location-details');
             locationSection.scrollIntoView({ behavior: 'smooth' });
         }
+
+        // Mobile optimizations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Handle mobile navigation
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    // Remove active class from all links
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    // Add active class to clicked link
+                    link.classList.add('active');
+                });
+            });
+
+            // Lazy loading for images
+            const images = document.querySelectorAll('img[data-src]');
+            const imageObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.classList.add('loaded');
+                        imageObserver.unobserve(img);
+                    }
+                });
+            });
+
+            images.forEach(img => imageObserver.observe(img));
+        });
 
         // Enhanced animations
         document.addEventListener('DOMContentLoaded', function() {
