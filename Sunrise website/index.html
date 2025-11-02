@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunrise Golden - Luxury Living & Retail Spaces</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/specifications.css">
+    <link rel="stylesheet" href="css/location-page.css">
+    <link rel="stylesheet" href="css/enhanced-ui.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-logo">
+            <a href="#home">
+                <img src="images/logo.png" alt="Sunrise Developers Logo">
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="#home" class="nav-link">HOME</a>
+            <a href="#about" class="nav-link">ABOUT US</a>
+            <a href="#location-details" class="nav-link">LOCATION</a>
+            <a href="#connect" class="nav-link">CONNECT US</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <video id="hero-video" autoplay muted loop playsinline>
+            <source src="video/video 2.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Sunrise Golden</h1>
+            <h2 class="hero-subtitle">2 & 3 BHK Fabulous Living & Retail Spaces</h2>
+            <button onclick="scrollToLocation()" class="hero-location-btn enhanced-btn">
+                <i class="fas fa-map-marker-alt"></i>
+                View Location
+            </button>
+        </div>
+    </section>
+
+    <!-- Experience Section (moved down to page 3) -->
+    <section id="about" class="experience-section">
+        <div class="experience-container">
+            <div class="experience-images">
+                <div class="main-image">
+                    <img src="images/face 1.jpg" alt="Building Front View">
+                </div>
+                <div class="image-grid">
+                    <img src="images/flat main hall.jpg" alt="Main Hall">
+                    <img src="images/flat kitchen.jpg" alt="Modern Kitchen">
+                    <img src="images/flat bedroom 1.jpg" alt="Master Bedroom">
+                </div>
+            </div>
+            <div class="experience-text">
+                <h3>Get ready to discover</h3>
+                <h2>The High-End Living</h2>
+                <p>Feel the joy of coming home to an iconic abode with more than enough space and amenities to accommodate your larger-than-life dreams. Welcome to <span class="highlight">Sunrise Golden</span>, the pinnacle of luxury living.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Building Showcase Section -->
+    <section id="building-showcase" class="building-showcase enhanced-section">
+        <div class="grid-pattern"></div>
+        <div class="building-showcase-container">
+            <div class="building-image-wrap enhanced-image fade-in-up">
+                <img src="images/main building 3.png" alt="Sunrise Golden Main Building" class="building-main-image">
+            </div>
+            <div class="building-content fade-in-up">
+                <span class="content-subtitle">Get ready to live at</span>
+                <h2 class="content-title">The Upcoming<br>Neighbourhood</h2>
+                <div class="location-badge">
+                    <div class="location-icon-wrap">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <span class="location-text">Vapi – Silvassa Main Road</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Tour Section -->
+    <section id="video-tour" class="video-tour-section">
+        <h2>Experience Virtual Tour</h2>
+        <div class="video-container">
+            <video id="tour-video">
+                <source src="video/video 1.mp4" type="video/mp4">
+            </video>
+            <div class="video-controls">
+                <button id="playPause" class="control-btn">
+                    <i class="fas fa-play"></i>
+                </button>
+                <button id="muteUnmute" class="control-btn">
+                    <i class="fas fa-volume-mute"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <h2>Luxury Living Gallery</h2>
+        <div class="gallery-grid" id="galleryGrid">
+            <!-- Gallery items will be added dynamically via JavaScript -->
+        </div>
+        <button id="loadMore" class="load-more-btn">Load More Photos</button>
+    </section>
+
+    <!-- Amenities Section (Page 6) -->
+    <section id="amenities" class="amenities-section">
+        <div class="amenities-inner">
+            <div class="small-title">Campus</div>
+            <h2>Amenities</h2>
+            <div class="amenities-grid">
+                <div class="amenity-item">
+                    <div class="amenity-icon"><i class="fas fa-door-open"></i></div>
+                    <h4>Entrance Gate</h4>
+                </div>
+                <div class="amenity-item">
+                    <div class="amenity-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h4>24 x 7 Security</h4>
+                </div>
+                <div class="amenity-item">
+                    <div class="amenity-icon"><i class="fas fa-video"></i></div>
+                    <h4>CCTV Cameras</h4>
+                </div>
+                <div class="amenity-item">
+                    <div class="amenity-icon"><i class="fas fa-tree"></i></div>
+                    <h4>Landscape Garden</h4>
+                </div>
+                <div class="amenity-item">
+                    <div class="amenity-icon"><i class="fas fa-utensils"></i></div>
+                    <h4>Banquet Hall</h4>
+                </div>
+                <div class="amenity-item">
+                    <div class="amenity-icon"><i class="fas fa-door-closed"></i></div>
+                    <h4>Entrance Foyer / Waiting Area</h4>
+                </div>
+                <div class="amenity-item">
+                    <div class="amenity-icon"><i class="fas fa-elevator"></i></div>
+                    <h4>Auto Door Lift</h4>
+                </div>
+                <div class="amenity-item">
+                    <div class="amenity-icon"><i class="fas fa-fire-alt"></i></div>
+                    <h4>Fire Safety</h4>
+                </div>
+            </div>
+            <div class="amenities-center">
+                <div class="amenity-item">
+                    <div class="amenity-icon"><i class="fas fa-bolt"></i></div>
+                    <h4>Generator Backup</h4>
+                </div>
+                <div class="amenity-item">
+                    <div class="amenity-icon"><i class="fas fa-parking"></i></div>
+                    <h4>G+ Basement Parking</h4>
+                </div>
+            </div>
+
+            <!-- kids play area removed as requested -->
+        </div>
+    </section>
+
+    <!-- Specifications Section -->
+    <section id="specifications" class="specifications-section">
+        <div class="specifications-inner">
+            <h2 class="specifications-title">Specifications</h2>
+            <div class="specifications-container">
+                <div class="specifications-grid">
+                    <div class="specification-card">
+                        <i class="fas fa-building spec-icon"></i>
+                        <h3 class="spec-title">Construction</h3>
+                        <p class="spec-details">Enhanced structure safety against earthquake for relevant zone</p>
+                    </div>
+                    <div class="specification-card">
+                        <i class="fas fa-border-all spec-icon"></i>
+                        <div>
+                            <h3 class="spec-title">Flooring</h3>
+                            <p class="spec-details">Living room/dining, kitchen and all bedrooms (24' x 48") vitrified granite tiles</p>
+                        </div>
+                    </div>
+                    <div class="specification-card">
+                        <i class="fas fa-sink spec-icon"></i>
+                        <div>
+                            <h3 class="spec-title">Kitchen</h3>
+                            <p class="spec-details">Kitchen platform will be made of black granite stone with SS sink</p>
+                        </div>
+                    </div>
+                    <div class="specification-card">
+                        <i class="fas fa-door-open spec-icon"></i>
+                        <div>
+                            <h3 class="spec-title">Doors</h3>
+                            <p class="spec-details">Main door will be decorative and other doors are flush door with stone frame</p>
+                        </div>
+                    </div>
+                    <div class="specification-card">
+                        <i class="far fa-window-restore spec-icon"></i>
+                        <div>
+                            <h3 class="spec-title">Windows</h3>
+                            <p class="spec-details">All windows of aluminium selections and window framing in granite</p>
+                        </div>
+                    </div>
+                    <div class="specification-card">
+                        <i class="fas fa-bolt spec-icon"></i>
+                        <div>
+                            <h3 class="spec-title">Electrification</h3>
+                            <p class="spec-details">Concealed circuit wiring of standard (ISI mark) company with modular switches and MCB</p>
+                        </div>
+                    </div>
+                    <div class="specification-card">
+                        <i class="fas fa-faucet spec-icon"></i>
+                        <div>
+                            <h3 class="spec-title">Plumbing</h3>
+                            <p class="spec-details">Concealed plumbing with standard sanitary ware & C.P. fitting UPVC pipes for water supply</p>
+                        </div>
+                    </div>
+                    <div class="specification-card">
+                        <i class="fas fa-paint-roller spec-icon"></i>
+                        <div>
+                            <h3 class="spec-title">Colour</h3>
+                            <p class="spec-details">Building finished with standard quality paint inside Birla putty, outside, dampproof with apex ultima colour</p>
+                        </div>
+                    </div>
+                    <div class="specification-card">
+                        <i class="fas fa-umbrella-beach spec-icon"></i>
+                        <div>
+                            <h3 class="spec-title">Terrace</h3>
+                            <p class="spec-details">Double coat waterproofing in terrace finished + china mozek</p>
+                        </div>
+                    </div>
+                    <div class="specification-card">
+                        <i class="fas fa-elevator spec-icon"></i>
+                        <div>
+                            <h3 class="spec-title">Lift</h3>
+                            <p class="spec-details">Premium quality stretcher lift with safety device in case of emergency</p>
+                        </div>
+                    </div>
+                    <div class="specification-card">
+                        <i class="fas fa-plug spec-icon"></i>
+                        <div>
+                            <h3 class="spec-title">Generator</h3>
+                            <p class="spec-details">Auto generator for sufficient power backup for common area of building and lift</p>
+                        </div>
+                    </div>
+                    <div class="specification-card">
+                        <i class="fas fa-parking spec-icon"></i>
+                        <div>
+                            <h3 class="spec-title">Parking</h3>
+                            <p class="spec-details">Ground + basement parking space</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Details Section -->
+    <section id="location-details" class="location-page">
+        <div class="location-page-container">
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d935.2664613440891!2d72.9413669244114!3d20.33889834372664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be0cfe9a668c929%3A0xd3602ad99a863e6a!2sUnique%20Restaurant!5e0!3m2!1sen!2sin!4v1761985314475!5m2!1sen!2sin" 
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="connectivity-container">
+                <h2 class="connectivity-title">Best Connectivity</h2>
+                <div class="connectivity-grid">
+                    <div class="connectivity-item">
+                        <div class="connectivity-icon"><i class="fas fa-train"></i></div>
+                        <div class="connectivity-details">
+                            <div class="connectivity-name">Railway Station</div>
+                            <div class="connectivity-distance">4.1 km</div>
+                        </div>
+                    </div>
+                    <div class="connectivity-item">
+                        <div class="connectivity-icon"><i class="fas fa-train-subway"></i></div>
+                        <div class="connectivity-details">
+                            <div class="connectivity-name">Bullet Train Station</div>
+                            <div class="connectivity-distance">1.5 km</div>
+                        </div>
+                    </div>
+                    <div class="connectivity-item">
+                        <div class="connectivity-icon"><i class="fas fa-hospital"></i></div>
+                        <div class="connectivity-details">
+                            <div class="connectivity-name">Hospital</div>
+                            <div class="connectivity-distance">1.0 km</div>
+                        </div>
+                    </div>
+                    <div class="connectivity-item">
+                        <div class="connectivity-icon"><i class="fas fa-film"></i></div>
+                        <div class="connectivity-details">
+                            <div class="connectivity-name">Cinema</div>
+                            <div class="connectivity-distance">8.0 km</div>
+                        </div>
+                    </div>
+                    <div class="connectivity-item">
+                        <div class="connectivity-icon"><i class="fas fa-school"></i></div>
+                        <div class="connectivity-details">
+                            <div class="connectivity-name">School</div>
+                            <div class="connectivity-distance">0.3 km</div>
+                        </div>
+                    </div>
+                    <div class="connectivity-item">
+                        <div class="connectivity-icon"><i class="fas fa-bus"></i></div>
+                        <div class="connectivity-details">
+                            <div class="connectivity-name">Bus Station</div>
+                            <div class="connectivity-distance">4.5 km</div>
+                        </div>
+                    </div>
+                    <div class="connectivity-item">
+                        <div class="connectivity-icon"><i class="fas fa-archway"></i></div>
+                        <div class="connectivity-details">
+                            <div class="connectivity-name">Dadra Nagar Haveli Gate</div>
+                            <div class="connectivity-distance">2.8 km</div>
+                        </div>
+                    </div>
+                    <div class="connectivity-item">
+                        <div class="connectivity-icon"><i class="fas fa-fire-extinguisher"></i></div>
+                        <div class="connectivity-details">
+                            <div class="connectivity-name">Fire Station</div>
+                            <div class="connectivity-distance">2.8 km</div>
+                        </div>
+                    </div>
+                    <div class="connectivity-item">
+                        <div class="connectivity-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <div class="connectivity-details">
+                            <div class="connectivity-name">College</div>
+                            <div class="connectivity-distance">1.2 km</div>
+                        </div>
+                    </div>
+                    <div class="connectivity-item">
+                        <div class="connectivity-icon"><i class="fas fa-shopping-cart"></i></div>
+                        <div class="connectivity-details">
+                            <div class="connectivity-name">D-Mart</div>
+                            <div class="connectivity-distance">2.2 km</div>
+                        </div>
+                    </div>
+                    <div class="connectivity-item">
+                        <div class="connectivity-icon"><i class="fas fa-road"></i></div>
+                        <div class="connectivity-details">
+                            <div class="connectivity-name">Vapi Char Rasta</div>
+                            <div class="connectivity-distance">3.5 km</div>
+                        </div>
+                    </div>
+                    <div class="connectivity-item">
+                        <div class="connectivity-icon"><i class="fas fa-road"></i></div>
+                        <div class="connectivity-details">
+                            <div class="connectivity-name">Delhi Mumbai Expressway</div>
+                            <div class="connectivity-distance">5.0 km</div>
+                        </div>
+                    </div>
+                    <div class="connectivity-item">
+                        <div class="connectivity-icon"><i class="fas fa-gas-pump"></i></div>
+                        <div class="connectivity-details">
+                            <div class="connectivity-name">Petrol Pump</div>
+                            <div class="connectivity-distance">0.0 km</div>
+                        </div>
+                    </div>
+                    <div class="connectivity-item">
+                        <div class="connectivity-icon"><i class="fas fa-mosque"></i></div>
+                        <div class="connectivity-details">
+                            <div class="connectivity-name">Jama Masjid</div>
+                            <div class="connectivity-distance">0.7 km</div>
+                        </div>
+                    </div>
+                    <div class="connectivity-item">
+                        <div class="connectivity-icon"><i class="fas fa-running"></i></div>
+                        <div class="connectivity-details">
+                            <div class="connectivity-name">Vapi Sports Club</div>
+                            <div class="connectivity-distance">10.0 km</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <p>&copy; 2025 Sunrise Developers. All Rights Reserved.</p>
+    </footer>
+
+    <div id="photoModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img id="modalImage" src="" alt="">
+        <button class="modal-nav prev">&lt;</button>
+        <button class="modal-nav next">&gt;</button>
+    </div>
+
+    <script>
+        function scrollToLocation() {
+            const locationSection = document.getElementById('location-details');
+            locationSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Enhanced animations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add enhanced classes
+            document.querySelectorAll('.amenity-icon, .spec-icon, .connectivity-icon').forEach(icon => {
+                icon.classList.add('animated-icon');
+            });
+
+            document.querySelectorAll('.amenity-item, .specification-card, .connectivity-item').forEach(card => {
+                card.classList.add('enhanced-card');
+            });
+
+            document.querySelectorAll('.location-image img, .experience-images img, .gallery-item img').forEach(img => {
+                img.parentElement.classList.add('enhanced-image');
+            });
+
+            // Initialize fade-in animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+        });
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>
